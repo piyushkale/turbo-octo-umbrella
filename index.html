@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDF School of Polytechnic</title>
+    <link rel="stylesheet" href="vdf.css">
+    <link rel="stylesheet" media="screen and (max-width:1000px)" href="mobile.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- menu -->
+
+    <header>
+ 
+      <div class="title">
+          <img src="vdf.jpg" alt="Logo" class="logo">
+          <h2> VILASRAO DESHMUKH FOUNDATION GROUP OF INSTITUTIONS <br> SCHOOL OF POLYTECHNIC, LATUR</h2>
+          <div class="contact">
+            <div class="icons">
+                <a href="" class="icon-a"><img src="fb.svg" alt="Icon"><span>Visit facebook page</span></a>
+                <a href="" class="icon-a"><img src="whatsapp.png" alt="Icon"><span>Contact through whatsapp</span></a>
+                <a href="" class="icon-a"><img src="yt.png" alt="Icon"><span>Visit youtube channel</span></a>
+                <a href="" class="icon-a"><img src="twitter.png" alt="Icon"><span>Connect us on twitter</span></a>
+            </div>
+            <div class="call">
+                <p style="all: unset;">CONTACT:02382-267-736</p>
+            </div>
+        </div>
+      </div>
+      
+        <div class="nav">
+              <input type="checkbox" id="nav-check">
+              <div class="nav-btn">
+                <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+              </div>
+              
+              <div class="nav-links">
+                  <ul>
+                <li><a href="#" target="_blank">Home</a></li>
+                <li class="ddli"><a href="">Departments</a>
+                  <ul class="ddul">
+                    <li><a href="#" target="_blank">Computer Engineering</a></li>
+                  <li><a href="#" target="_blank">Civil Engineering</a></li>
+                  <li><a href="#" target="_blank">Mechanical Engineering</a></li>
+                  <li><a href="#" target="_blank">E&TC Engineering</a></li>
+                </ul></li>
+                <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                <li><a href="facilities.html" target="_blank">Facilities</a></li>
+                
+                <li class="ddli"><a href="">About</a>
+                  <ul class="ddul">
+                    <li><a href="#" target="_blank">About Institute</a></li>
+                  <li><a href="#" target="_blank">Principal's message</a></li>
+                  <li><a href="#" target="_blank">Faculties</a></li>
+                </ul></li>
+                  </ul>
+              </div>
+            </div>
+          </header>
+
+    <section id="slideshow">  
+    <div class="img-slider">
+        <div class="slide active">
+          <img src="collage.jpg" alt="">
+          <div class="info">
+            <h2></h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="g4.jpg" alt="">
+          <div class="info">
+            <h2>COMPUTING LAB</h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="bg2.jpg" alt="">
+          <div class="info">
+            <h2></h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="library.jpg" alt="">
+          <div class="info">
+            <h2>LIBRARY</h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="g3.jfif" alt="">
+          <div class="info">
+            <h2>ELECTRICAL LAB</h2>
+          </div>
+        </div>
+        <section class="admission">
+          <!-- <h3>For <span class="sp-design">ADMISSION</span> enquiry & <span class="sp-design">REGISTRATION</span> FORM</h3> -->
+          <h3>Welcome to VDF SCHOOL OF POLYTECHNIC, LATUR</h3>
+          <div>
+              <a href=""><input type="button" value="Registration Form"></a>
+          </div>
+      </section>
+
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+  
+      <script type="text/javascript">
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+  
+      // Javascript for image slider manual navigation
+      var manualNav = function(manual){
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+  
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+  
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          manualNav(i);
+          currentSlide = i;
+        });
+      });
+  
+      // Javascript for image slider autoplay navigation
+      var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+  
+        var repeater = () => {
+          setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+  
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+  
+          if(slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 3000);
+        }
+        repeater();
+      }
+      repeat();
+      </script>
+  </section> 
+
+    <!-- Department  -->
+    <h3 class="heading-branch">
+        course
+    </h3>
+
+    <section class="branch">
+
+        <div class="sub-branch">
+            <h4>Computer</h4>
+            <img src="computer.jpg" alt="computer img">
+            <p class="sb-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit incidunt maxime, facilis dolores consequatur odit cumque illum, eos, eum nisi harum cupiditate accusantium et vitae adipisci ipsa perferendis laudantium odio...</p>
+            
+            <a href="file:///C:/Users/Myself/Desktop/vdf/computer.html"><input type="button" value="View"></a>
+        </div>
+        <div class="sub-branch">
+            <h4>Civil</h4>
+            <img src="civil.png" alt="civil img">
+            <p class="sb-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus fuga id debitis? Culpa corporis quidem ullam voluptatum officia nisi possimus dolores ipsa! Non et ipsam aperiam, vel voluptatibus adipisci ea!...</p>
+
+            <a href="file:///C:/Users/Myself/Desktop/vdf/civil.html"><input type="button" value="View"></a>
+        </div>
+        <div class="sub-branch">
+            <h4>Mechanical</h4>
+            <img src="mechanical.jpg" alt="mechanical img">
+            <p class="sb-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit praesentium explicabo rem consequatur quis harum fuga libero cum blanditiis ipsa. In non rem possimus asperiores rerum corporis animi porro perferendis?...</p>
+
+            <a href="file:///C:/Users/Myself/Desktop/vdf/mechanical.html"><input type="button" value="View"></a>
+        </div>
+        <div class="sub-branch">
+            <h4>Electronics</h4>
+            <img src="electronics.jpg" alt="electronics img">
+            <p class="sb-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sint nemo tenetur officiis similique recusandae, veritatis temporibus error voluptates quasi quibusdam? Sapiente illo officia saepe recusandae, numquam adipisci sequi distinctio?... </p>
+
+            <a href="file:///C:/Users/Myself/Desktop/vdf/etc.html"><input type="button" value="View"></a>
+        </div>
+    </section>
+
+    <!-- message owner -->
+    <section class="message">
+        <div class="sons">
+            <h3>Our Inspiration</h3>
+            <img src="vdeshmukh.png" alt="Image Vilasrao Deshmukh">
+            <h4>SHRI. VILASRAOJI DESHMUKH</h4>
+            <p>“We strive to create educational institutions that enlighten, empower and liberate all who pass through
+                their doors”</p>
+        </div>
+
+        <div class="sons">
+            <h3>Presidents Message</h3>
+            <img src="president.png" alt="Image Amit Deshmukh">
+            <h4>SHRI. AMIT DESHMUKH</h4>
+            <p>India is a young nation-a country with a young population. Education in all its aspects is a resource
+                that the country today must make available to the youth to enable them to participate in and contribute
+                to their own growth as well as that of the nation. In our own small way, we at Vilasrao Deshmukh
+                Foundation (VDF) wish to contribute to this effort.</p>
+
+        </div>
+
+    </section>
+
+    <!-- Aim of vdf polytechnic -->
+    <section class="content">
+      <div style="width: 42rem;">
+        <h4>About vdf institute</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nihil nesciunt explicabo voluptate, tempore sunt architecto fugiat, eaque nemo iure ab deleniti neque! In architecto quibusdam vitae neque fuga minus voluptas, mollitia obcaecati voluptates! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur similique, vero iste voluptatibus reiciendis cum quod, suscipit quis fugiat doloribus velit ad nobis blanditiis ullam totam molestiae nesciunt, dicta cupiditate pariatur eligendi obcaecati laborum. Fuga error ratione impedit natus reprehenderit perspiciatis commodi numquam sunt quibusdam assumenda, culpa asperiores sit amet ipsa laboriosam, earum autem mollitia ipsum inventore unde illo obcaecati excepturi. Debitis reiciendis facilis saepe unde, voluptate sequi hic odio.
+      </p>
+    </div>
+
+      <div id="galleryimg">
+        <!-- <img src="g6.jpg" alt="gallery image">
+        <img src="cb6.jpeg" alt="gallery image">
+        <img src="g5.JPG" alt="gallery image"> -->
+        <img src="collage.jpg" alt="gallery image">
+        <span>View Gallery</span>
+      </div>
+  </section>
+
+    <!-- Forms section -->
+    <!-- <section id="form-section">
+        <form action="">
+            <span class="heading-form">Enquiry</span>
+            <input type="email" name="myEmail" id="emailid" placeholder="Enter email">
+            <input type="text" id="textfield" placeholder="Enter your text here">
+            <input type="button" value="SUBMIT" id="submit-btn">
+        </form>
+
+    </section> -->
+
+    <!-- Footer section  -->
+
+    <footer>
+        <div class="footer-box">
+            <h4>ADDRESS</h4>
+            <p>
+                MIDC, Educity, Additional, Barshi - Latur Hwy, Latur, Maharashtra 413531
+            </p>
+        </div>
+        <div class="footer-box">
+            <h4>EXPLORE</h4>
+            <ul>
+                <a href="">
+                    <li>Gallery</li>
+                </a>
+                <a href="">
+                    <li>Departments</li>
+                </a>
+                <a href="">
+                    <li>About</li>
+                </a>
+                <a href="">
+                    <li>Enquiry</li>
+                </a>
+            </ul>
+        </div>
+        <div class="footer-box">
+          <h4 style="    background: black;
+          padding: 0.5rem 0;">LOCATION</h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60576.39031850361!2d76.48318492407383!3d18.391740845828785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf80944e7d4cc9%3A0x68d2a2216dc80fe2!2sVDF%20SCHOOL%20OF%20POLYTECHNIC%2C%20LATUR!5e0!3m2!1sen!2sin!4v1648004862790!5m2!1sen!2sin" width="550" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="weby" style="    text-align: center;
+        padding: 0.3rem 0;
+        font-family: fangsong;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        width: 100vw;
+        background: #80801e;">
+          <h3>Website by- Piyush Kale (3rd year CO) (2022)</h3>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
